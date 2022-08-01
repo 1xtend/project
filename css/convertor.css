@@ -17,10 +17,18 @@ body {
   margin: 0 auto;
 }
 
+.drop {
+  padding: 0 15px;
+}
+
+.drop .container {
+  height: 842px;
+}
+
 .drop-zone {
   max-width: 1211px;
   height: 421px;
-  margin: 291px auto 312px;
+  margin: 166px auto 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -65,8 +73,10 @@ body {
   height: 100%;
   border-radius: 10px;
   overflow: hidden;
-  background-color: #cccccc;
-  background-size: cover;
+  background-color: rgba(68, 68, 85, 0.5);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
   position: relative;
 }
 
@@ -79,6 +89,79 @@ body {
   padding: 5px 0;
   color: #ffffff;
   background: rgba(0, 0, 0, 0.75);
+  font-family: 'Roboto', sans-serif;
   font-size: 14px;
   text-align: center;
+}
+
+.drop-controls {
+  max-width: 1211px;
+  margin: 0 auto 166px;
+  display: none;
+}
+
+.drop-controls .drop-controls__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.drop-controls .drop-controls__elements {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 15px;
+          column-gap: 15px;
+}
+
+.drop-controls .drop-controls__elements .drop-controls__title {
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.drop-controls .drop-controls__select {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #444455;
+  border: none;
+  border-radius: 15px;
+  outline: none;
+  width: 186px;
+  height: 48px;
+  padding: 0 10px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+
+.drop-controls .drop-controls__btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #444455;
+  border: none;
+  border-radius: 15px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 186px;
+  height: 48px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  color: #FFFFFF;
+  cursor: pointer;
+  -webkit-transition: background-color .3s;
+  transition: background-color .3s;
 }

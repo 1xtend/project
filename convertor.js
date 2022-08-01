@@ -2,6 +2,10 @@
 
 const menuBtn = document.querySelector('.header__menu-btn');
 const menu = document.querySelector('.header__menu');
+const dropControls = document.querySelector('.drop-controls');
+const cloud = document.querySelector('.drop-zone__img');
+const dropZoneInput = document.querySelector('.drop-zone__input');
+
 menuBtn.addEventListener('click', () => {
   menuBtn.classList.toggle('header__menu-btn_active');
   menu.classList.toggle('header__menu_active');
@@ -77,4 +81,10 @@ function updateThumbnail(dropZoneElement, file) {
   } else {
     thumbnailElement.style.backgroundImage = null;
   }
+
+  dropControls.style.display = 'block';
+  cloud.style.display = 'none';
+  dropZoneInput.style.maxWidth = 300;
 }
+
+// style="display: none;"
