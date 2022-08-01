@@ -84,7 +84,6 @@ function updateThumbnail(dropZoneElement, file) {
 
   dropControls.style.display = 'block';
   cloud.style.display = 'none';
-  dropZoneInput.style.maxWidth = 300;
 }
 
 // style="display: none;"
