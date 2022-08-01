@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Convertor</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/convertor.css">
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="container">
+
+        <a href="#" class="header__logo">
+            <img src="img/logo.svg">
+        </a>
+        <nav class="header__menu">
+            <ul class="header__list">
+                <li class="header__item">
+                    <a href="#" class="header__link header__link_active">Генератор градієнтів</a>
+                </li>
+                <li class="header__item">
+                    <a href="#" class="header__link">Конвертер файлів</a>
+                </li>
+                <li class="header__item">
+                    <a href="#" class="header__link">Скорочувач посилань</a>
+                </li>
+                <li class="header__item">
+                    <a href="#" class="header__link">ІТ Новини</a>
+                </li>
+                <li class="header__item">
+                    <a href="#" class="header__link">ІТ Змагання</a>
+                </li>
+            </ul>
+        </nav>
+        <button class="header__menu-btn">
+            <span></span>
+        </button>
+
+    </div>
+</header>
+
+  <main>
+    <section class="drop">
+      <div class="container">
+
+        <div class="drop-zone">
+          <img src="img/layer1.png" alt="cloud" class="drop-zone__img">
+          <span class="drop-zone__prompt">Drag&Drop file here</span>
+          <input accept="png, jpg, jpeg, webp" type="file" name="myFile" class="drop-zone__input" >
+        </div>
+        
+        
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+
+        <p class="footer__copy">&copy; 2022 всі права зареєстровані</p>
+        <a href="#" class="footer__socials-link">
+            <img src="img/github.svg" class="footer__socials-img">
+        </a>
+
+    </div>
+  </footer>
+
+ 
+
+
+  <script src="convertor.js"></script>
+</body>
+</html>
