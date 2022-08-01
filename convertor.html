@@ -7,6 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/nice-select2.css">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/convertor.css">
 </head>
@@ -53,32 +54,29 @@
           <img src="img/layer1.png" alt="cloud" class="drop-zone__img">
           <span class="drop-zone__prompt">Drag&Drop file here</span>
           <input accept="png, jpg, webp" type="file" name="myFile" class="drop-zone__input" >
-        </div>
+        </div> 
 
         <div class="drop-controls" >
-          <form class="drop-controls__form">
-
+          <form class="drop-controls__form" id="form" enctype="multipart/form-data">
             <div class="drop-controls__container">
-
               <div class="drop-controls__elements">
                 <h3 class="drop-controls__title">Конвертувати в</h3>
-                
-                  <select name="form-select" id="select" class="drop-controls__select">
+                  <select name="file" id="toInput" class="drop-controls__select">
                     <option value="jpg" class="drop-controls__select-option">jpg</option>
                     <option value="png" class="drop-controls__select-option">png</option>
                     <option value="webp" class="drop-controls__select-option">webp</option>
                   </select>
               </div>
-  
               <button type="submit" class="drop-controls__btn">Конвертувати</button>
             </div>
-
           </form>
         </div>
         
-        
-
       </div>
+
+      <img src="" id="img" style="display: block;">
+        <a href="" id="link" download="converted" style="display: none;">Download</a>
+
     </section>
   </main>
 
@@ -95,7 +93,8 @@
 
  
 
-
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="nice-select2.js"></script>
   <script src="convertor.js"></script>
 </body>
 </html>

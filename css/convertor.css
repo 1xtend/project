@@ -19,16 +19,27 @@ body {
 
 .drop {
   padding: 0 15px;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .drop .container {
-  height: 842px;
+  width: 100%;
+  padding: 105px 0;
 }
 
 .drop-zone {
-  max-width: 1211px;
+  max-width: 80%;
   height: 421px;
-  margin: 166px auto 40px;
+  margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -95,8 +106,8 @@ body {
 }
 
 .drop-controls {
-  max-width: 1211px;
-  margin: 0 auto 166px;
+  max-width: 80%;
+  margin: 40px auto 0;
   display: none;
 }
 

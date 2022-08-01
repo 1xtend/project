@@ -1,7 +1,13 @@
 ul{
   list-style: none;
 }
+
+body {
+    min-height: 100vh;
+}
+
 // header
+
 .header{
   position: absolute;
   top: 0;
@@ -125,7 +131,7 @@ ul{
 .footer{
   position: absolute;
   width: 100%;
-  // bottom: 0;
+  bottom: 0;
   left: 0;
   background: #fff;
   color: #222233;
