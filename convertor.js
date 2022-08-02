@@ -104,7 +104,7 @@ form.addEventListener('submit', function (e) {
 
   const formData = new FormData(e.target);
   axios(
-    `https://v2.convertapi.com/convert/${format}/to/${toInput.value}?Token=DG7evB9j`,
+    `https://v2.convertapi.com/convert/${format}/to/${toInput.value}?Token=JDrezqZd`,
     {
       method: 'POST',
       data: formData,
