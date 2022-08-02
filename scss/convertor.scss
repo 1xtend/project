@@ -14,7 +14,7 @@ body {
 
 .container {
   max-width: 1470px;
-  padding: 15px 0;
+  padding: 0 15px;
   margin: 0 auto;
 }
 
@@ -175,14 +175,20 @@ body {
     font-size: 35px;
     margin-bottom: 15px;  
   }
-
-  .converted-container__download-link {
-    font-family: 'Roboto', sans-serif;
-    font-size: 20px;
-    text-decoration: underline;
-    color: #FFFFFF;
-
-  }
 }
 
+.converted-container__download-link {
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  text-decoration: none;
+  color: #FFFFFF;
+  padding: 15px;
+  border-radius: 15px;
+  background: #445;
+  display: inline-block !important;
+}
 
+.loader{
+  display: block;
+  margin: 0 auto;
+}

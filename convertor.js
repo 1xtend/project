@@ -11,6 +11,8 @@ const dropControlsSelectContainer = document.querySelector(
 const convertedContainer = document.querySelector('.converted-container');
 const dropControls = document.querySelector('.drop-controls');
 
+NiceSelect.bind(document.getElementById('toInput'), { searchable: false });
+
 menuBtn.addEventListener('click', () => {
   menuBtn.classList.toggle('header__menu-btn_active');
   menu.classList.toggle('header__menu_active');
@@ -95,6 +97,7 @@ function updateThumbnail(dropZoneElement, file) {
 const form = document.querySelector('#form');
 const toInput = document.querySelector('#toInput');
 const input = document.querySelector('.drop-zone__input');
+const loader = document.querySelector('.loader');
 
 form.addEventListener('submit', function (e) {
   e.preventDefault();
@@ -103,6 +106,9 @@ form.addEventListener('submit', function (e) {
   console.log(format);
 
   const formData = new FormData(e.target);
+  dropControls.style.display = 'none';
+  loader.style.display = 'block';
+
   axios(
     `https://v2.convertapi.com/convert/${format}/to/${toInput.value}?Token=JDrezqZd`,
     {
@@ -117,8 +123,7 @@ form.addEventListener('submit', function (e) {
     link.style.display = 'block';
     img.style.display = 'block';
     link.href = `data:image/${toInput.value};base64,` + imgCode;
-
-    dropControls.style.display = 'none';
+    loader.style.display = 'none';
     convertedContainer.style.display = 'block';
   });
 });

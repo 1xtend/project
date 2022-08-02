@@ -24,8 +24,8 @@
     width: 100%;
     border-radius: 15px;
     border: none;
-    margin-top: 3px;
-    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
 }
 
 .nice-select:hover {
