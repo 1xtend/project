@@ -2,9 +2,14 @@
 
 const menuBtn = document.querySelector('.header__menu-btn');
 const menu = document.querySelector('.header__menu');
-const dropControls = document.querySelector('.drop-controls');
 const cloud = document.querySelector('.drop-zone__img');
 const dropZoneInput = document.querySelector('.drop-zone__input');
+const dropControlsBtn = document.querySelector('.drop-controls__btn');
+const dropControlsSelectContainer = document.querySelector(
+  '.drop-controls__select-container'
+);
+const convertedContainer = document.querySelector('.converted-container');
+const dropControls = document.querySelector('.drop-controls');
 
 menuBtn.addEventListener('click', () => {
   menuBtn.classList.toggle('header__menu-btn_active');
@@ -82,14 +87,13 @@ function updateThumbnail(dropZoneElement, file) {
     thumbnailElement.style.backgroundImage = null;
   }
 
-  dropControls.style.display = 'block';
   cloud.style.display = 'none';
+  dropControlsBtn.style.display = 'flex';
+  dropControlsSelectContainer.style.display = 'flex';
 }
 
 const form = document.querySelector('#form');
-const fromInput = document.querySelector('#fromInput');
 const toInput = document.querySelector('#toInput');
-
 const input = document.querySelector('.drop-zone__input');
 
 form.addEventListener('submit', function (e) {
@@ -106,11 +110,15 @@ form.addEventListener('submit', function (e) {
       data: formData,
     }
   ).then((data) => {
-    imgCode = data.data.Files[0].FileData;
+    const imgCode = data.data.Files[0].FileData;
     const img = document.querySelector('#img');
     const link = document.querySelector('#link');
-    img.src = `data:image/${toInput.value};base64, + imgCode`;
+    img.src = `data:image/${toInput.value};base64,` + imgCode;
     link.style.display = 'block';
-    link.href = `data:image/${toInput.value};base64, + imgCode`;
+    img.style.display = 'block';
+    link.href = `data:image/${toInput.value};base64,` + imgCode;
+
+    dropControls.style.display = 'none';
+    convertedContainer.style.display = 'block';
   });
 });

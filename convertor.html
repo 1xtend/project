@@ -50,33 +50,35 @@
     <section class="drop">
       <div class="container">
 
-        <div class="drop-zone">
-          <img src="img/layer1.png" alt="cloud" class="drop-zone__img">
-          <span class="drop-zone__prompt">Drag&Drop file here</span>
-          <input accept="png, jpg, webp" type="file" name="myFile" class="drop-zone__input" >
-        </div> 
+        
 
         <div class="drop-controls" >
           <form class="drop-controls__form" id="form" enctype="multipart/form-data">
-            <div class="drop-controls__container">
-              <div class="drop-controls__elements">
-                <h3 class="drop-controls__title">Конвертувати в</h3>
-                  <select name="file" id="toInput" class="drop-controls__select">
-                    <option value="jpg" class="drop-controls__select-option">jpg</option>
-                    <option value="png" class="drop-controls__select-option">png</option>
-                    <option value="webp" class="drop-controls__select-option">webp</option>
-                  </select>
-              </div>
-              <button type="submit" class="drop-controls__btn">Конвертувати</button>
-            </div>
+            <div class="drop-zone">
+              <img src="img/layer1.png" alt="cloud" class="drop-zone__img">
+              <span class="drop-zone__prompt">Drag&Drop file here</span>
+              <input accept="png, jpg, webp" type="file" name="File" class="drop-zone__input">
+            </div> 
+            <button type="submit" class="drop-controls__btn">Конвертувати</button>
           </form>
+
+          <div class="drop-controls__select-container">
+            <h3 class="drop-controls__title">Конвертувати в</h3>
+            <select name="file" id="toInput" class="drop-controls__select">
+              <option value="jpg" class="drop-controls__select-option">jpg</option>
+              <option value="png" class="drop-controls__select-option">png</option>
+              <option value="webp" class="drop-controls__select-option">webp</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="converted-container">
+          <img src="" id="img" class="drop-zone drop-controls converted-container__img">
+          <h2 class="converted-container__title">Дякую за користування нашим сайтом</h2>
+          <a href="" id="link" download="converted">Завантажити файл</a>
         </div>
         
       </div>
-
-      <img src="" id="img" style="display: block;">
-        <a href="" id="link" download="converted" style="display: none;">Download</a>
-
     </section>
   </main>
 
