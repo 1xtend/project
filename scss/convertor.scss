@@ -176,7 +176,6 @@ body {
   }
 }
 
-
 .converted-container {
   text-align: center;
   display: none;
@@ -188,7 +187,8 @@ body {
 
   @media (max-width: 768px) {
     .converted-container__img {
-      height: 100%;
+      width: 100%;
+      height: auto;
     }
   }
 
