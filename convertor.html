@@ -58,17 +58,19 @@
               <img src="img/layer1.png" alt="cloud" class="drop-zone__img">
               <span class="drop-zone__prompt">Drag&Drop file here</span>
               <input accept="png, jpg, webp" type="file" name="File" class="drop-zone__input">
-            </div> 
-            <button type="submit" class="drop-controls__btn">Конвертувати</button>
+            </div>
           </form>
 
           <div class="drop-controls__select-container">
-            <h3 class="drop-controls__title">Конвертувати в</h3>
-            <select name="file" id="toInput" class="drop-controls__select">
-              <option value="jpg" class="drop-controls__select-option">jpg</option>
-              <option value="png" class="drop-controls__select-option">png</option>
-              <option value="webp" class="drop-controls__select-option">webp</option>
-            </select>
+            <div class="drop-controls__select-block">
+              <h3 class="drop-controls__title">Конвертувати в</h3>
+              <select name="file" id="toInput" class="drop-controls__select">
+                <option value="jpg" class="drop-controls__select-option">jpg</option>
+                <option value="png" class="drop-controls__select-option">png</option>
+                <option value="webp" class="drop-controls__select-option">webp</option>
+              </select> 
+            </div>
+            <button type="submit" class="drop-controls__btn" form="form">Конвертувати</button>
           </div>
         </div>
         <img src="img/loader.gif" class="loader" style="display: none;">
