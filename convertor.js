@@ -110,7 +110,7 @@ form.addEventListener('submit', function (e) {
   loader.style.display = 'block';
 
   axios(
-    `https://v2.convertapi.com/convert/${format}/to/${toInput.value}?Token=JDrezqZd`,
+    `https://v2.convertapi.com/convert/${format}/to/${toInput.value}?Token=D0gzvl0j`,
     {
       method: 'POST',
       data: formData,
