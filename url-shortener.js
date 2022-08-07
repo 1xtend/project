@@ -1,20 +1,25 @@
 'use strict';
 
-const userUrl = document.querySelector('#url-input').textContent;
+const userUrl = document.querySelector('#url-input');
 
-console.log(userUrl);
+const urlFormId = document.querySelector('#url-form-id');
+urlFormId.addEventListener('submit', (e) => {
+  e.preventDefault();
 
-const options = {
-  method: 'POST',
-  headers: {
-    'content-type': 'application/json',
-    Authorization:
-      'Bearer 2RPpm4mgkKEI3BnZpVKBhA1g6nwjg7otJqqWGUwj1fI5eeaf0Hrxm51w5JB4',
-  },
-  body: `{"url":"${userUrl}","domain":"tiny.one"}`,
-};
+  const options = {
+    method: 'POST',
+    headers: {
+      Accept: 'application/json',
+      'content-type': 'application/json',
+      apikey: 'f65bc4687bf1469b81cf2f5b9ab287ac',
+    },
+    body: `{"destination":"${userUrl.value}","domain":{ "fullName": "rebrand.ly"}}`,
+  };
 
-fetch('https://api.tinyurl.com/create', options)
-  .then((response) => response.json())
-  .then((response) => console.log(response))
-  .catch((err) => console.error(err));
+  fetch('https://api.rebrandly.com/v1/links', options)
+    .then((response) => response.json())
+    .then((response) => console.log(response))
+    .catch((err) => console.error(err));
+});
+
+// console.log(userUrl);
