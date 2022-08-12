@@ -38,4 +38,16 @@ urlFormId.addEventListener('submit', (e) => {
     .catch((err) => console.error(err));
 });
 
-// console.log(userUrl);
+// copy
+
+const copyBtn = document.querySelector('#url-btn');
+const copyAlert = document.querySelector('.copy-alert');
+
+copyBtn.addEventListener('click', () => {
+  urlShortenedInput.select();
+  document.execCommand('copy');
+  copyAlert.classList.add('active');
+  setTimeout(() => {
+    copyAlert.classList.remove('active');
+  }, 2000);
+});

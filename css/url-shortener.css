@@ -9,6 +9,7 @@ body {
   background: #223;
   font-family: "Roboto", sans-serif;
   color: #fff;
+  position: relative;
 }
 
 .container {
@@ -34,6 +35,39 @@ body {
 .url-shortener .container {
   width: 100%;
   padding: 105px 0;
+}
+
+.copy-alert {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 50px;
+  border-radius: 15px;
+  background-color: #444455;
+  position: absolute;
+  left: 15px;
+  right: 15px;
+  top: 130px;
+  -webkit-transform: translateY(-370%);
+          transform: translateY(-370%);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.copy-alert p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 24px;
+}
+
+.copy-alert.active {
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
 }
 
 .url-shortener__container {
@@ -121,6 +155,7 @@ body {
   cursor: pointer;
   -webkit-transition: background-color .2s;
   transition: background-color .2s;
+  position: relative;
 }
 
 .url-shortener__form-container .url-shortener__btn:hover {
